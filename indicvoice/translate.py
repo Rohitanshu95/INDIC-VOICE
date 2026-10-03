@@ -55,7 +55,10 @@ class Translator:
 
             # Attempt to initialize IndicProcessor if IndicTransToolkit is installed
             try:
-                from IndicTransToolkit import IndicProcessor
+                try:
+                    from IndicTransToolkit.processor import IndicProcessor
+                except ImportError:
+                    from IndicTransToolkit import IndicProcessor
 
                 self.ip = IndicProcessor(inference=True)
             except ImportError:
@@ -63,6 +66,7 @@ class Translator:
                     "IndicTransToolkit not installed. Falling back to direct Hugging Face tokenizer."
                 )
                 self.ip = None
+
 
             self.tokenizer = AutoTokenizer.from_pretrained(
                 self.model_id,

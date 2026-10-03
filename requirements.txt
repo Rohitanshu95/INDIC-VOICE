@@ -11,7 +11,8 @@ huggingface-hub>=0.22.0
 git+https://github.com/huggingface/parler-tts.git
 
 # Translation Support (IndicTrans2)
-git+https://github.com/AI4Bharat/IndicTransToolkit.git
+indictranstoolkit>=1.1.0
+
 
 # Audio Processing & Scientific Compute
 numpy>=1.24.0,<2.0.0

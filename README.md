@@ -129,10 +129,10 @@ Features:
 Start the REST API service:
 
 ```bash
-uvicorn api.main:app --host 0.0.0.0 --port 8000
+uvicorn api.main:app --host 0.0.0.0 --port 8090
 ```
 
-Interactive Swagger documentation is available at `http://localhost:8000/docs`.
+Interactive Swagger documentation is available at `http://localhost:8090/docs`.
 
 ### API Endpoints
 
@@ -146,7 +146,7 @@ Interactive Swagger documentation is available at `http://localhost:8000/docs`.
 ### Example Request (`POST /synthesize`)
 
 ```bash
-curl -X POST "http://localhost:8000/synthesize" \
+curl -X POST "http://localhost:8090/synthesize" \
   -H "Content-Type: application/json" \
   -d '{
     "text": "Welcome to Odisha.",
@@ -199,7 +199,7 @@ Build and run with Docker:
 
 ```bash
 docker build -t indicvoice:latest .
-docker run -p 8000:8000 -p 7860:7860 -e HF_TOKEN="your_token" indicvoice:latest
+docker run -p 8090:8090 -p 7860:7860 -e HF_TOKEN="your_token" indicvoice:latest
 ```
 
 ---

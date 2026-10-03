@@ -35,9 +35,10 @@ COPY pyproject.toml README.md LICENSE ./
 # Pre-create data directories
 RUN mkdir -p data/cache data/outputs data/review .hf_cache
 
-# Expose ports for FastAPI (8000) and Gradio UI (7860)
-EXPOSE 8000
+# Expose ports for FastAPI (8090) and Gradio UI (7860)
+EXPOSE 8090
 EXPOSE 7860
 
-# Default command starts the FastAPI server
-CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Default command starts the FastAPI server on port 8090
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8090"]
+

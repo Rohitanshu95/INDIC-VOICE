@@ -91,9 +91,11 @@ app.include_router(router)
 
 def run() -> None:
     """Entrypoint to run uvicorn server directly."""
+    import os
     import uvicorn
 
-    uvicorn.run("api.main:app", host="0.0.0.0", port=8000, reload=True)
+    port = int(os.getenv("INDICVOICE_PORT", "8090"))
+    uvicorn.run("api.main:app", host="0.0.0.0", port=port, reload=True)
 
 
 if __name__ == "__main__":

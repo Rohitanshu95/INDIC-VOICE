@@ -1,0 +1,28 @@
+# Speaker descriptions and names for ai4bharat/indic-parler-tts
+# The model conditions generation on natural language descriptions.
+# Consistent speaker descriptions prevent voice drift across sentences.
+voices:
+  female:
+    odia: "A female speaker speaks in a clear, natural, moderately paced voice with close recording and no background noise."
+    hindi: "Divya speaks in a clear, moderately paced voice with a close recording and no background noise."
+    bengali: "Aditi speaks in a clear, moderately paced voice with a close recording and no background noise."
+    tamil: "A female speaker speaks in a clear, expressive voice at a moderate pace with clean recording."
+    telugu: "A female speaker speaks in a clear, expressive voice at a moderate pace with clean recording."
+    kannada: "A female speaker speaks in a clear, expressive voice at a moderate pace with clean recording."
+    malayalam: "A female speaker speaks in a clear, expressive voice at a moderate pace with clean recording."
+    marathi: "A female speaker speaks in a clear, expressive voice at a moderate pace with clean recording."
+    gujarati: "A female speaker speaks in a clear, expressive voice at a moderate pace with clean recording."
+    punjabi: "A female speaker speaks in a clear, expressive voice at a moderate pace with clean recording."
+    assamese: "A female speaker speaks in a clear, expressive voice at a moderate pace with clean recording."
+  male:
+    odia: "A male speaker speaks in a clear, natural, resonant, moderately paced voice with close recording and no background noise."
+    hindi: "Rohit speaks in a clear, moderately paced voice with a close recording and no background noise."
+    bengali: "Arjun speaks in a clear, calm, moderately paced voice with a close recording and no background noise."
+    tamil: "A male speaker speaks in a clear, resonant voice at a moderate pace with clean recording."
+    telugu: "A male speaker speaks in a clear, resonant voice at a moderate pace with clean recording."
+    kannada: "A male speaker speaks in a clear, resonant voice at a moderate pace with clean recording."
+    malayalam: "A male speaker speaks in a clear, resonant voice at a moderate pace with clean recording."
+    marathi: "A male speaker speaks in a clear, resonant voice at a moderate pace with clean recording."
+    gujarati: "A male speaker speaks in a clear, resonant voice at a moderate pace with clean recording."
+    punjabi: "A male speaker speaks in a clear, resonant voice at a moderate pace with clean recording."
+    assamese: "A male speaker speaks in a clear, resonant voice at a moderate pace with clean recording."

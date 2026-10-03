@@ -1,0 +1,27 @@
+# Glossary terms to preserve or translate consistently for key entities
+# Keys are English terms (case-insensitive matching), values are target language translations
+glossary:
+  odia:
+    "Odisha": "ଓଡ଼ିଶା"
+    "Bhubaneswar": "ଭୁବନେଶ୍ୱର"
+    "Puri": "ପୁରୀ"
+    "Cuttack": "କଟକ"
+    "Jagannath": "ଜଗନ୍ନାଥ"
+    "Konark": "କୋଣାର୍କ"
+    "Chilika": "ଚିଲିକା"
+    "Rourkela": "ରାଉରକେଲା"
+    "Sambalpur": "ସମ୍ବଲପୁର"
+  hindi:
+    "Odisha": "ओडिशा"
+    "Bhubaneswar": "भुवनेश्वर"
+    "Puri": "पुरी"
+    "Cuttack": "कटक"
+    "Jagannath": "जगन्नाथ"
+    "Konark": "कोणार्क"
+  bengali:
+    "Odisha": "ওড়িশা"
+    "Bhubaneswar": "ভুবনেশ্বর"
+    "Puri": "পুরী"
+    "Cuttack": "কটক"
+    "Jagannath": "জগন্নাথ"
+    "Konark": "কোণার্ক"

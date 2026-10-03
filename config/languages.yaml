@@ -1,0 +1,56 @@
+languages:
+  odia:
+    label: "Odia (ଓଡ଼ିଆ)"
+    mt_code: "ory_Orya"
+    script: "Oriya"
+    default_voice: "female"
+  hindi:
+    label: "Hindi (हिन्दी)"
+    mt_code: "hin_Deva"
+    script: "Devanagari"
+    default_voice: "female"
+  bengali:
+    label: "Bengali (বাংলা)"
+    mt_code: "ben_Beng"
+    script: "Bengali"
+    default_voice: "female"
+  tamil:
+    label: "Tamil (தமிழ்)"
+    mt_code: "tam_Taml"
+    script: "Tamil"
+    default_voice: "female"
+  telugu:
+    label: "Telugu (తెలుగు)"
+    mt_code: "tel_Telu"
+    script: "Telugu"
+    default_voice: "female"
+  kannada:
+    label: "Kannada (ಕನ್ನಡ)"
+    mt_code: "kan_Knda"
+    script: "Kannada"
+    default_voice: "female"
+  malayalam:
+    label: "Malayalam (മലയാളം)"
+    mt_code: "mal_Mlym"
+    script: "Malayalam"
+    default_voice: "female"
+  marathi:
+    label: "Marathi (मराठी)"
+    mt_code: "mar_Deva"
+    script: "Devanagari"
+    default_voice: "female"
+  gujarati:
+    label: "Gujarati (ગુજરાતી)"
+    mt_code: "guj_Gujr"
+    script: "Gujarati"
+    default_voice: "female"
+  punjabi:
+    label: "Punjabi (ਪੰਜਾਬੀ)"
+    mt_code: "pan_Guru"
+    script: "Gurmukhi"
+    default_voice: "female"
+  assamese:
+    label: "Assamese (অসমীয়া)"
+    mt_code: "asm_Beng"
+    script: "Bengali"
+    default_voice: "female"

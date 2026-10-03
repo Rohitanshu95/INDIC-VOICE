@@ -1,0 +1,109 @@
+/* IndicVoice - Custom UI Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+Oriya:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg-subtle: #f8fafc;
+  --border-color: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-muted: #64748b;
+  --error-color: #dc2626;
+  --success-color: #16a34a;
+}
+
+body, .gradio-container {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
+}
+
+/* Header Banner */
+.app-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.app-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Indic Script Output Formatting */
+.indic-text-output textarea,
+.indic-text-output .prose {
+  font-family: 'Noto Sans Oriya', 'Noto Sans Devanagari', 'Noto Sans Bengali', sans-serif !important;
+  font-size: 1.25rem !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0.02em;
+  background-color: var(--bg-subtle);
+  border-radius: 0.5rem;
+}
+
+/* Character Counter */
+.char-counter {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+.char-counter.warning {
+  color: #ea580c;
+  font-weight: 600;
+}
+
+.char-counter.error {
+  color: var(--error-color);
+  font-weight: 700;
+}
+
+/* Primary Action Button */
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover) !important;
+  transform: translateY(-1px);
+}
+
+/* Status message banner */
+.status-box {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.status-box.error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: var(--error-color);
+}
+
+.status-box.success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: var(--success-color);
+}
+
+.status-box.warning {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #b45309;
+}

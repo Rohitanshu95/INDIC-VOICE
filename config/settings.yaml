@@ -1,0 +1,19 @@
+# Pipeline runtime settings
+max_chars: 2000
+sentence_pause_ms: 250
+cache_enabled: true
+mt_batch_size: 8
+mt_num_beams: 5
+device: "auto" # auto | cpu | cuda
+
+# Model identifiers
+translation_model_id: "ai4bharat/indictrans2-en-indic-dist-200M"
+tts_model_id: "ai4bharat/indic-parler-tts"
+
+# Fallback audio parameters
+default_sampling_rate: 44100
+
+# Directory paths relative to workspace root
+output_dir: "data/outputs"
+cache_dir: "data/cache"
+review_dir: "data/review"

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Welcome to Odisha",
+    "text": "Welcome to Odisha. Bhubaneswar is known as the temple city of India, famous for its ancient heritage and warm hospitality.",
+    "language": "Odia (ଓଡ଼ିଆ)",
+    "voice": "Female"
+  },
+  {
+    "title": "Lord Jagannath Temple",
+    "text": "The sacred temple of Lord Jagannath is situated in the holy coastal city of Puri. Millions of devotees visit every year.",
+    "language": "Odia (ଓଡ଼ିଆ)",
+    "voice": "Female"
+  },
+  {
+    "title": "Opening Hours & Travel",
+    "text": "The museum and library are open from 9:00 AM to 6:00 PM from Tuesday through Sunday. Admission is free for children.",
+    "language": "Hindi (हिन्दी)",
+    "voice": "Female"
+  },
+  {
+    "title": "Directions & Weather",
+    "text": "Please take the highway road towards Cuttack. The weather forecast predicts pleasant sunny skies with a light breeze.",
+    "language": "Bengali (বাংলা)",
+    "voice": "Male"
+  }
+]

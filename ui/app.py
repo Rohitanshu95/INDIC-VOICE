@@ -82,16 +82,22 @@ def process_text(
         )
 
     lang_key = LABEL_TO_KEY.get(language_label, "odia")
-    voice_key = voice_preset.lower().strip()
+    voice_key = (voice_preset or "female").lower().strip()
+
+    # Safely handle custom voice description (can be None from Gradio Textbox)
+    custom_desc = None
+    if custom_voice and isinstance(custom_voice, str) and custom_voice.strip():
+        custom_desc = custom_voice.strip()
 
     try:
         result = PIPELINE.translate_and_speak(
             text=text,
             target_lang=lang_key,
             voice=voice_key,
-            skip_translation=skip_translation,
-            custom_description=custom_voice if custom_voice.strip() else None,
+            skip_translation=bool(skip_translation),
+            custom_description=custom_desc,
         )
+
 
         status_msg = f"✓ Success in {result.duration_sec} s"
         if result.cached:
@@ -114,11 +120,20 @@ def process_text(
 
 def build_app() -> gr.Blocks:
     """Construct Gradio UI."""
-    with gr.Blocks(
-        title="IndicVoice — English to Indian Speech",
-        css=CSS_CONTENT,
-        theme=gr.themes.Soft(),
-    ) as app:
+    is_gradio_v6 = getattr(gr, "__version__", "").startswith("6")
+    if is_gradio_v6:
+        app = gr.Blocks(title="IndicVoice — English to Indian Speech")
+    else:
+        try:
+            app = gr.Blocks(
+                title="IndicVoice — English to Indian Speech",
+                css=CSS_CONTENT,
+                theme=gr.themes.Soft(),
+            )
+        except Exception:
+            app = gr.Blocks(title="IndicVoice — English to Indian Speech")
+
+    with app:
 
         with gr.Row(elem_classes=["app-header"]):
             with gr.Column():
@@ -257,5 +272,25 @@ def build_app() -> gr.Blocks:
 
 
 if __name__ == "__main__":
+    import os
+
     app = build_app()
-    app.launch(server_name="0.0.0.0", server_port=7860, share=False)
+    # Default to 7861 to prevent collision with Docker's port 7860 binding
+    port = int(os.getenv("GRADIO_SERVER_PORT", "7861"))
+    host = os.getenv("GRADIO_SERVER_NAME", "127.0.0.1")
+
+    launch_kwargs = {
+        "server_name": host,
+        "server_port": port,
+        "share": False,
+    }
+    if getattr(gr, "__version__", "").startswith("6"):
+        launch_kwargs["css"] = CSS_CONTENT
+        launch_kwargs["theme"] = gr.themes.Soft()
+
+    try:
+        app.launch(**launch_kwargs)
+    except TypeError:
+        app.launch(server_name=host, server_port=port, share=False)
+
+
